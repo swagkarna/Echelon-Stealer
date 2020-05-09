@@ -5,43 +5,39 @@
 ![](https://antiscan.me/images/result/RPkjsJH4jRTa.png)
 
 ### Stealer Functionality
--- All based browsers Chromium, Edge, Gecko (Mozilla Firefox)
--- Clipboard data
--- Discord Session
--- Telegram Session
--- Outlook
--- Grabber files with saving path directories and scanning subdirectories
--- FileZilla
--- Total Commander
--- Pidgin
--- Psi, Psi+
--- Screenshot
--- PCinfo
--- NordVPN
--- OpenVPN
--- ProtonVPN
++ All based browsers Chromium, Edge, Gecko (Mozilla Firefox)
++ Clipboard data
++ Discord Session
++ Telegram Session
++ Outlook
++ Grabber files with saving path directories and scanning subdirectories
++ FileZilla
++ Total Commander
++ Pidgin
++ Psi, Psi+
++ Screenshot
++ PCinfo
++ NordVPN
++ OpenVPN
++ ProtonVPN
 ### Crypto Wallets
--- Armory
--- Atomic Wallet
--- Bitcoin Core
--- Bytecoin 
--- Dash Core
--- Electrum
--- Ethereum
--- Exodus
--- Jaxx
--- Litecoin Core
--- Monero
--- Zcash
++ Armory
++ Atomic Wallet
++ Bitcoin Core
++ Bytecoin 
++ Dash Core
++ Electrum
++ Ethereum
++ Exodus
++ Jaxx
++ Litecoin Core
++ Monero
++ Zcash
 ### Additionally
--- All ways to collect logs are random
--- Self-removal after sending the log
--- Log Resubmission Protection
++ All ways to collect logs are random
++ Self-removal after sending the log
++ Log Resubmission Protection
 
 ### Support paid
 Telegram: @madcod
 BTC: 1JHgjtUed6xD1j9ybRbbXv4ejwRbBiabBG
-
-
-
-
