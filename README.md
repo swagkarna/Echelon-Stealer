@@ -1,4 +1,4 @@
-## New Update Bug fixes
+## 🔋 New Update Bug fixes
 
 ## ☣️ Stealer with sending logs to Telegram bot
 ![](http://dl4.joxi.net/drive/2020/05/01/0039/3040/2595808/08/9239ba3967.jpg)
