@@ -38,8 +38,8 @@
 + Self-removal after sending the log
 + Log Resubmission Protection
 
- + ❗️ Написан исключительно в образовательных целях! Я не несу ответственности за использование данного проекта и любых его частей.
- + ❗️ Written exclusively for educational purposes! I am not responsible for the use of this project and any of its parts.
+ + ❗️ Написан исключительно в образовательных целях! Я не несу ответственности за использование данного проекта и любых его частей кода.
+ + ❗️ Written exclusively for educational purposes! I am not responsible for the use of this project and any of its parts code.
 
 ### Support paid
 Telegram: @madcod
